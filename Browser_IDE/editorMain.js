@@ -766,6 +766,10 @@ async function restartProgram(){
     runProgram();
 }
 
+// ------ Vertical View ------
+
+
+
 // ------ Setup code editor buttons ------
 
 // Updates buttons based on the state of the ExecutionEnvironment
