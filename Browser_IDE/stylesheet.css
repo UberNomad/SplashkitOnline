@@ -331,7 +331,8 @@ textarea {
 .sk-main-columns {
     overflow: hidden;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     flex-grow: 1;
 }
 

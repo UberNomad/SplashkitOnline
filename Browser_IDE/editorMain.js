@@ -386,9 +386,17 @@ function createGutterSplitters(){
     Split(['#fileViewContainer', '#codeViewContainer', '#runtimeContainer'], {
         gutterSize: gutterWidth,
         sizes: sizes,
+        direction: 'vertical',
         onDragEnd: function (sizes) {
             localStorage.setItem('sk-online-split-sizes', JSON.stringify(sizes));
         },
+        // gutterStyle: function (dimension, gutterSize) {
+        //     console.log(dimension, gutterSize);
+        //     return {
+        //         dimension: gutterSize + 'px',
+        //         // 'width': '100%',
+        //     }
+        // },
     });
     // So just wrap them and hide them afterwards instead
     const gutters = document.getElementsByClassName("gutter");
@@ -403,7 +411,8 @@ function createGutterSplitters(){
         // fix position
         gutters[i].style.position = 'absolute';
         gutters[i].style.left = "-"+(gutterWidth/2).toString()+"px";
-        gutters[i].style.height = '100%';
+        // gutters[i].style.height = '100%';
+        gutters[i].style.width = '100%';
     }
 }
 // -------------------- Setup Tabs --------------------
